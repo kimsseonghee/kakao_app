@@ -74,12 +74,15 @@ function TweetInsert({userObj}) {
         maxLength={120} className='InsertInput__input'/>
         <input type='submit' value='&rarr;' className='InsertInput__arrow'/>
       </div>
+      
       <label htmlFor="attach-file" className='InsetInput__label'>
         <span>Add photos</span>
         <FontAwesomeIcon icon="fa-solid fa-plus"/>
       </label>
       <input type='file' accept='image/*' onChange={onFilechange} 
        id='attach-file' style={{opacity:0}}/>
+
+       
       {attachment && (
         <div className='Insetform__attachment'>
           <img src={attachment} style={{backgroundImage:attachment}} alt=""/>

@@ -8,7 +8,7 @@ import Profiles from 'routes/Profiles';
 function AppRouter({isLoggedIn, userObj}) {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       {isLoggedIn && <Navigation userObj = {userObj}/>}
 
       <Routes>
